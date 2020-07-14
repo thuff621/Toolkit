@@ -31,7 +31,7 @@ def which(val, compare): # This will search for an exact matching string in a li
     fw = "No Match"
     for v in val:
         rw = rw + 1
-        if v == compare:
+        if str(v).find(compare) != -1:
             fw = rw
     return (fw)
 
