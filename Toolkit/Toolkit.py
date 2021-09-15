@@ -33,6 +33,7 @@ def which(val, compare): # This will search for an exact matching string in a li
         rw = rw + 1
         if str(v).find(compare) != -1:
             fw = rw
+            break
     return (fw)
 
 
