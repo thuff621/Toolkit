@@ -25,14 +25,11 @@ def adjust(dat, val):
     for d in dat:
         hold.append(float(d) + val)
     return(hold)
-
-def which(val, compare): # This will search for an exact matching string in a list
     rw = -1
     fw = "No Match"
     for v in val:
         rw = rw + 1
-        if str(v).find(str(compare)) != -1:
-            print("Match found")
+        if str(v) == str(compare):
             fw = rw
             break
     return (fw)
