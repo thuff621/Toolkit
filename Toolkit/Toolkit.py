@@ -19,6 +19,27 @@ def mean(val, na='False'):
             return('')
         else:
             return(s/sl)
+def which(val, compare, comp = 'eq'): # This will search for an exact matching string in a list
+    rw = -1
+    fw = "No Match"
+    for v in val:
+        rw = rw + 1
+        if comp  == "eq":
+            if str(v) == str(compare):
+                if fw == "No Match":
+                    fw = []
+                fw.append(rw)
+        if comp  == "lt":
+            if str(v) < str(compare):
+                if fw == "No Match":
+                    fw = []
+                fw.append(rw)
+        if comp  == "gt":
+            if str(v) > str(compare):
+                if fw == "No Match":
+                    fw = []
+                fw.append(rw)
+    return (fw)
 
 def adjust(dat, val):
     hold = []
