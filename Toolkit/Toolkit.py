@@ -77,9 +77,10 @@ def Decrapify(va): # This removes useless shit from a string
             hd.append(v)
         return (hd)
 
-def readCSV(dr): # This reads in a csv file
+def readCSV(dr, header = True): # This reads in a csv file
     with open(dr, 'r') as file:
-        next(file)
+        if header != True
+            next(file)
         ct = -1
         for row in file:
             ct = ct + 1
